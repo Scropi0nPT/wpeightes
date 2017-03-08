@@ -1,0 +1,77 @@
+/** -----------------------------------------------------:[ 14.0 - Footer ]:---------- */
+#colophon {
+	padding-bottom: unit( ( @spacing-base * 2 ), em );
+	background: @dark;
+	color: lighten( @dark, 30% );
+}
+
+/** ---:[ Site Supplementary ]:--- */
+#site-supplementary {
+	.max-width( @max-width );
+	padding-top: @spacing-base;
+	.clearfix();
+	@media screen and ( max-width: @max-width ) {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	.widget {
+		margin-bottom: @spacing-base;
+		@media screen and ( min-width: 500px ) and ( max-width: 800px ) {
+			.column( 6 );
+			&:nth-child( 2n+1 ) {
+				clear: left;
+				padding-right: unit( ( @spacing-base / 1.5 ), em );
+			}
+			&:nth-child( 2n+2 ) {
+				padding-left: unit( ( @spacing-base / 1.5 ), em );
+			}
+		}
+		@media screen and ( min-width: 800px ) {
+			.column( 4 );
+			&:nth-child( 2n+1 ) {
+				clear: none;
+			}
+			&:nth-child( 3n+1 ) {
+				clear: left;
+				padding-right: unit( ( @spacing-base / 1.5 ), em );
+			}
+			&:nth-child( 3n+2 ) {
+				padding-left: unit( ( @spacing-base / 3 ), em );
+				padding-right: unit( ( @spacing-base / 3 ), em );
+			}
+			&:nth-child( 3n+3 ) {
+				padding-left: unit( ( @spacing-base / 1.5 ), em );
+			}
+		}
+		&-title {
+			margin-top: 0;
+			margin-bottom: 1em;
+			color: #FFF;
+		}
+		// Recent Entries Widget
+		&_recent_entries,
+		&_recent_comments {
+			a {
+				color: #FFF;
+				&:hover {
+					color: lighten( @dark, 30% );
+				}
+			}
+		}
+	}
+}
+
+/** ---:[ Site Info ]:--- */
+.site-info {
+	padding-top: @spacing-base;
+	border-top: 1px solid lighten( @dark, 5% );
+	font-size: .8em;
+	text-align: center;
+	color: lighten( @dark, 15% );
+	a {
+		color: lighten( @dark, 15% );
+		&:hover {
+			color: #FFF;
+		}
+	}
+}
